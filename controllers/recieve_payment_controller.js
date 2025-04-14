@@ -112,7 +112,6 @@ async function initiatePayout(req, res ) {
     res.status(200).json({message: "transaction completed", response: response})
   } catch (error) {
     res.status(500).json({message: "transaction not completed", response: error.message})
-    throw new Error("Failed to initiate payout");
   }
 }
 
