@@ -92,12 +92,6 @@ async function initiatePayout(amount, narration) {
   console.log("calling the payout function...")
   try {
 
-    console.log("Initiating payout with:", {
-      account_bank: process.env.LOGISTICS_BANK_CODE,
-      account_number: process.env.LOGISTICS_ACCOUNT_NUMBER,
-      amount,
-      narration,
-    });
     const response = await axios.post('https://api.flutterwave.com/v3/transfers', {
       account_bank: process.env.LOGISTICS_BANK_CODE,
       account_number: process.env.LOGISTICS_ACCOUNT_NUMBER,
