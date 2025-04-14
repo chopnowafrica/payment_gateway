@@ -6,7 +6,7 @@ router.post("/payment", paymentController.recievePyment);
 
 router.post("/webhook", paymentController.webhooks);
 
-router.post("/delivery-payout", paymentController.initiatePayout);
+router.post("/delivery-payout", paymentController.initiatePayout); 
 
 
 
