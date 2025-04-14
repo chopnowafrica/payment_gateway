@@ -109,10 +109,7 @@ async function initiatePayout(amount, narration) {
     console.log("Payout initiated:", response.data);
     return response.data;
   } catch (error) {
-    console.error("Payout failed:", {
-      
-      data: error,
-    });
+    console.error(`Payout failed: ${error}`);
     throw new Error("Failed to initiate payout");
   }
 }
